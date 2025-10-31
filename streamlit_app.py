@@ -223,7 +223,7 @@ if not st.session_state.finished:
                 st.button("⬆️ Celle-ci est plus importante", on_click=choose_current_over_mid, use_container_width=True)
             with col2:
                 st.markdown(f"**{q_mid.texte}**")
-                st.button("⬇️ L’autre est plus importante", on_click=choose_mid_over_current, use_container_width=True)
+                st.button("⬆️ Celle-là est plus importante", on_click=choose_mid_over_current, use_container_width=True)
             st.button("⚖️ Égalité (quasi-équivalent)", on_click=equality_choice, use_container_width=True)
         else:
             # Comparaison contre extrémité: décider direction
