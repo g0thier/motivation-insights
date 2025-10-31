@@ -243,6 +243,9 @@ if not st.session_state.finished:
 
 # Résultats
 if st.session_state.finished:
+    # On enlève les valeurs None (au cas ou l'utilisateur clique compulsivement)
+    st.session_state.sorted_ids = [qid for qid in st.session_state.sorted_ids if qid is not None]
+
     st.success("🎉 Classement terminé !")
     df_details, df_cats = compute_results(st.session_state.sorted_ids)
 
